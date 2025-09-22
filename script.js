@@ -11,12 +11,7 @@ const songs = [
   ];
   
   function generateSetlist() {
-    const shuffledSongs = songs.sort(() => Math.random() - 0.5);
-  
-    // This line updates the webpage by adding new HTML content using JavaScript.
-    // Think of it like telling JavaScript: “Print this list onto the page.”
-    document.getElementById("setlist").innerHTML =
-      shuffledSongs.map(song => `<li>${song}</li>`).join('');
+// Create generateSetList() function here
   }
   
   document.getElementById("generateSetlist").addEventListener("click", generateSetlist);
@@ -29,20 +24,14 @@ const songs = [
   const countdown = document.getElementById("countdown");
   
   function updateCountdown() {
-    const now = new Date();
-    const diff = tourStart - now;
+    // create variables define date
   
     if (diff <= 0) {
-      countdown.textContent = "The tour has started!";
-      clearInterval(timer);
-      return;
+    // Create conditional for if statement under this line
     }
-  
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-  
-    countdown.textContent = `⏰ ${hours}h ${minutes}m ${seconds}s until showtime`;
+  // convert time difference in milliseconds under this line
+  // --------------
+  // update the text on your webpage using interpolation under this line
   }
   
   const timer = setInterval(updateCountdown, 1000);
